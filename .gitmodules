@@ -1,0 +1,9 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/inDriveApp/backend
+[submodule "docs"]
+	path = docs
+	url = https://github.com/inDriveApp/docs
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/inDriveApp/frontend

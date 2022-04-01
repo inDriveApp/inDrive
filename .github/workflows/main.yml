@@ -34,3 +34,4 @@ jobs:
       run: |
         ls -la
         pwd
+        cp -r /home/inDrive/actions-runner/_work/inDrive/inDrive/backend /home/inDrive/projects/backend/

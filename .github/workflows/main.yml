@@ -31,7 +31,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r backend/requirements.txt
     - name: Copy to production
-      run: |
-        ls -la
-        pwd
-        cp -r /home/inDrive/actions-runner/_work/inDrive/inDrive/backend /home/inDrive/projects/backend/
+      run: |        
+        if [ ! -d '/home/inDrive/projects/backend' ]; then
+            mkdir /home/inDrive/projects/backend
+        
+        cp -r /home/inDrive/actions-runner/_work/inDrive/inDrive/backend/ /home/inDrive/projects/backend/
+        
+        if [ ! -d '/home/inDrive/projects/frontend/' ]; then
+            mkdir /home/inDrive/projects/frontend/
+        
+        cp -r /home/inDrive/actions-runner/_work/inDrive/inDrive/frontend/ /home/inDrive/projects/frontend/

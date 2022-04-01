@@ -32,12 +32,16 @@ jobs:
         pip install -r backend/requirements.txt
     - name: Copy to production
       run: |        
-        if [ ! -d '/home/inDrive/projects/backend' ]; then
+        if [ ! -d '/home/inDrive/projects/backend' ]
+        then
             mkdir /home/inDrive/projects/backend
+        fi
         
         cp -r /home/inDrive/actions-runner/_work/inDrive/inDrive/backend/ /home/inDrive/projects/backend/
         
-        if [ ! -d '/home/inDrive/projects/frontend/' ]; then
+        if [ ! -d '/home/inDrive/projects/frontend/' ]
+        then
             mkdir /home/inDrive/projects/frontend/
+        fi
         
         cp -r /home/inDrive/actions-runner/_work/inDrive/inDrive/frontend/ /home/inDrive/projects/frontend/
